@@ -24,6 +24,7 @@ exports.register = async (req, res) => {
     });
 
     await user.save();
+    localStorage.setItem(userEmail);
     res.status(201).json({ message: "User created successfully" });
   } catch (error) {
     res.status(500).json({ error: "Internal Server Error" });
@@ -50,6 +51,7 @@ exports.login = async (req, res) => {
     if (!isPasswordValidated) {
       return res.status(401).json({ error: "Password not correct" });
     }
+    localStorage.setItem(userEmail);
     res.status(200).json({ message: "Login Successfull" });
   } catch (error) {
     res.status(500).json({ error: "Internal Server Error" });
