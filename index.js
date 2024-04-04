@@ -22,5 +22,5 @@ mongoose
     console.log(err);
   });
 app.listen(PORT, () => {
-  console.log(`server started working at http://localHost:${PORT}`);
+  console.log(`server started working at http://localhost:${PORT}`);
 });
