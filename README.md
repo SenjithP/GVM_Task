@@ -25,3 +25,5 @@ npm start
 
 And thats all about the project. Happy Cloning!
 
+NB:While checking with postman as of user authentication details was saved in localstorage and at present I didint use JWT, SearchingProduct will show "You are not authenticated". after clonning by removing middleware from search route we can easily search based on query.
+
